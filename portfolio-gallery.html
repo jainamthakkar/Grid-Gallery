@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Portfollio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.1rem;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            align-items: center;
+            background: linear-gradient(to right, #041308, #0b3317);
+        }
+        .left_text{
+            flex-basis: 30%; /* to set width */
+        }
+        .heading{
+            font-size: 3rem;
+            color: aliceblue;
+            text-align: center;
+        }
+        .font{
+            color: aliceblue;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .gallery {
+            flex-basis: 50%; /* to set width */
+            display: grid;
+            gap: 8px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 120px;                          
+        }
+        .box{
+            background-size: cover;
+            background-position: top;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            background-blend-mode: hard-light;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        .box:hover{
+            background-color: #999;
+            background-position: center;
+            box-shadow: 0 0 4px rgb(112, 99, 99);
+        }
+        #image1{
+            background-image: url(https://images.unsplash.com/photo-1520454974749-611b7248ffdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmVhY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+        }
+        #image2{
+            background-image: url(https://images.unsplash.com/photo-1592743263126-bb241ee76ac7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+        }
+        #image3{
+            background-image: url(https://images.unsplash.com/photo-1596625820723-f0f481ff80be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60);
+        }
+        #image4{
+            background-image: url(https://images.unsplash.com/photo-1610809027249-86c649feacd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW91bmF0aW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+        }
+        #image5{
+            background-image: url(https://media.istockphoto.com/id/1300163718/photo/blurred-of-tropical-colorful-sunset-over-ocean-on-the-beach-at-thailand-tourism-background.jpg?b=1&s=170667a&w=0&k=20&c=OOaQfZq3qB_hkf-uv85fNxyaYB65e6h1yYb8Q2hiMVo=);
+        }
+        #image6{
+            background-image: url(https://images.unsplash.com/photo-1628082878684-1b66400cdf85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5hdHVyYWwlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+        }
+        #image7{
+            background-image: url(https://images.unsplash.com/photo-1569817480337-01a8b22cd8d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyYWwlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+        }
+        .row-2{
+            grid-row: span 2;
+        }
+        .col-2{
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left_text">
+            <h2 class="heading">Grid Portfolio</h2>
+            <p class="font">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repellat aliquam nobis omnis nihil repellendus quasi corrupti quas aut dolores nulla perferendis molestias expedita libero doloribus, fugit optio voluptatem aperiam.
+            </p>
+        </div>
+        <div class="gallery">
+            <div class="box row-2" id="image1">Beach</div>
+            <div class="box col-2" id="image2">Brown-Trees</div>
+            <div class="box" id="image3">Desert</div>
+            <div class="box row-2" id="image4">Mountains</div>
+            <div class="box col-2" id="image5">Sunset</div>
+            <div class="box" id="image6">Ocean</div>
+            <div class="box col-2" id="image7">Forest</div>
+        </div>
+    </div>
+    
+</body>
+</html>
